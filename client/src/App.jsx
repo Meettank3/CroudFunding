@@ -1,6 +1,6 @@
 import React from 'react'
 import {Route, Routes} from 'react-router-dom'
-import Home from './pages/Home'
+import {Home,CreateCampaing, Profile, CampaingDetails } from './pages'
 import { NavBar, SideBar } from './components'
 
 const App = () => {
@@ -13,6 +13,9 @@ const App = () => {
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/create-campaign' element={< CreateCampaing />} />
+          <Route path='/campaign-details/:id' element={<CampaingDetails />} />
         </Routes>
       </div>
     </div>
